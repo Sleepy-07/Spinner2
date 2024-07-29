@@ -1,6 +1,7 @@
 package com.example.spinner
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -73,16 +74,29 @@ class MainActivity : AppCompatActivity() {
         binding.fabbtn.setOnClickListener {
             val dialog = Dialog(this)
             dialog.setContentView(R.layout.alert_dialog)
-            val inputtext = dialog.findViewById<EditText>(R.id.Input)
+            val text = dialog.findViewById<EditText>(R.id.Input)
             val btn = dialog.findViewById<Button>(R.id.Savebtn)
 
             btn.setOnClickListener {
-                list.add(inputtext.text.toString())
+                val inputtext = text.text.toString()
+                if(inputtext.isNullOrEmpty()){
+                    Toast.makeText(this, "Enter a valid item name", Toast.LENGTH_SHORT).show()
+                    dialog.dismiss()
+                }
+                else {
+                list.add(inputtext)
                 arrayAdapter.notifyDataSetChanged()
                 dialog.dismiss()
             }
+            }
 
                 dialog.show()
+        }
+
+
+        binding.btnSpin.setOnClickListener {
+            val intent = Intent(this,Spinner::class.java)
+            startActivity(intent)
         }
 
 

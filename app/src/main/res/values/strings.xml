@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Spinner</string>
+
+
+    <string-array name="gender">
+        <item name="select gender">Select type of Gender you are</item>
+        <item name="male">Male</item>
+        <item name="female">Female</item>
+        <item name="other">Others</item>
+    </string-array>
 </resources>
