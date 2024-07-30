@@ -19,8 +19,8 @@
 
    <Button
        android:id="@+id/btnSpin"
-       android:layout_width="151dp"
-       android:layout_height="50dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
        android:text="Spinner"
        android:textStyle="bold"
        android:textSize="20sp"
@@ -29,7 +29,21 @@
        app:layout_constraintHorizontal_bias="0.498"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.944" />
+       app:layout_constraintVertical_bias="0.844" />
+
+   <Button
+       android:id="@+id/btnListAdpater"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="List Adpater"
+       android:textStyle="bold"
+       android:textSize="20sp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/btnSpin"
+       app:layout_constraintVertical_bias="0.2" />
 
    <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/fabbtn"

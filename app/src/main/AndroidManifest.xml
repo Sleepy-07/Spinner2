@@ -13,8 +13,11 @@
         android:theme="@style/Theme.Spinner"
         tools:targetApi="31">
         <activity
+            android:name=".ListBaseAdapter"
+            android:exported="false" />
+        <activity
             android:name=".Spinner"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

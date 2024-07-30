@@ -98,6 +98,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,Spinner::class.java)
             startActivity(intent)
         }
+        binding.btnListAdpater.setOnClickListener {
+            val intent = Intent(this,ListBaseAdapter::class.java)
+            startActivity(intent)
+        }
 
 
 
